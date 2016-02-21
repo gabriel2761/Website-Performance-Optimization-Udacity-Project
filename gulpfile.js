@@ -9,25 +9,25 @@ var gulp = require('gulp'),
 gulp.task('csso-bootstrap', function() {
 	return gulp.src('app/views/css/bootstrap-grid.css')
 		.pipe(csso())
-		.pipe(gulp.dest('dist/views/css'))
+		.pipe(gulp.dest('views/css'))
 });
 
 gulp.task('csso-print', function() {
 	return gulp.src('app/css/print.css')
 		.pipe(csso())
-		.pipe(gulp.dest('dist/css'))
+		.pipe(gulp.dest('css'))
 });
 
 gulp.task('uglify', function() {
 	return gulp.src('app/js/perfmatters.js')
 		.pipe(uglify())
-		.pipe(gulp.dest('dist/js'))
+		.pipe(gulp.dest('js'))
 });
 
 gulp.task('uglify-pizzas', function() {
 	return gulp.src('app/views/js/main.js')
 		.pipe(uglify())
-		.pipe(gulp.dest('dist/views/js'))
+		.pipe(gulp.dest('views/js'))
 });
 
 gulp.task('imagemin', function() {
@@ -37,14 +37,14 @@ gulp.task('imagemin', function() {
 			svgoPlugins: [{removeViewBox: false}],
 			use: [pngquant()]
 		}))
-		.pipe(gulp.dest('dist/img'))
+		.pipe(gulp.dest('img'))
 });
 
 gulp.task('minify', function() {
 	return gulp.src('app/**/*.html')
 		.pipe(htmlmin({collapseWhitespace: true}))
 		.pipe(inline())
-    	.pipe(gulp.dest('dist'));
+    	.pipe(gulp.dest('../gabriel2761.github.io'));
 });
 
 gulp.task('default',
