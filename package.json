@@ -1,0 +1,22 @@
+{
+  "name": "gabriel2761.github.io",
+  "version": "1.0.0",
+  "description": "Udacity Project",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gabriel2761/gabriel2761.github.io.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gabriel2761/gabriel2761.github.io/issues"
+  },
+  "homepage": "https://github.com/gabriel2761/gabriel2761.github.io#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1"
+  }
+}
