@@ -34,6 +34,4 @@ gulp.task('minify', function() {
     	.pipe(gulp.dest('dist'));
 });
 
-gulp.task('default', function() {
-	console.log('hello');
-});
+gulp.task('default', ['minify', 'imagemin', 'uglify', 'uglify-pizzas']);
