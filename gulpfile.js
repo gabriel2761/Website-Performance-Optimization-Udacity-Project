@@ -3,7 +3,20 @@ var gulp = require('gulp'),
 	inline = require('gulp-inline-source'),
 	imagemin = require('gulp-imagemin'),
 	pngquant = require('imagemin-pngquant')
-	uglify = require('gulp-uglify');
+	uglify = require('gulp-uglify'),
+	csso = require('gulp-csso');
+
+gulp.task('csso-bootstrap', function() {
+	return gulp.src('app/views/css/bootstrap-grid.css')
+		.pipe(csso())
+		.pipe(gulp.dest('dist/views/css'))
+});
+
+gulp.task('csso-print', function() {
+	return gulp.src('app/css/print.css')
+		.pipe(csso())
+		.pipe(gulp.dest('dist/css'))
+});
 
 gulp.task('uglify', function() {
 	return gulp.src('app/js/perfmatters.js')
@@ -34,4 +47,11 @@ gulp.task('minify', function() {
     	.pipe(gulp.dest('dist'));
 });
 
-gulp.task('default', ['minify', 'imagemin', 'uglify', 'uglify-pizzas']);
+gulp.task('default',
+	['minify',
+	'imagemin',
+	'uglify',
+	'uglify-pizzas',
+	'csso-print',
+	'csso-bootstrap'
+]);
