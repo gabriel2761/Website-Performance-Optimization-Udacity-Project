@@ -1,14 +1,9 @@
-## Website Performance Optimization portfolio project
+## Website Performance Optimization Portfolio Project
 
 ### How to run
 
 1. Clone the repository `git clone https://github.com/gabriel2761/gabriel2761.github.io/`
-2. Open index.html in a browser `cd gabriel2761.github.io/ && open index.html`
-
-#### OR
-
-Check out website on github pages
-[gabriel2761.github.io/](http://gabriel2761.github.io)
+2. Open index.html in a browser
 
 ### Optimizations for pizza scroll
 
